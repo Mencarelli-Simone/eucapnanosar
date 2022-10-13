@@ -1,0 +1,92 @@
+%% Creator: Inkscape 1.2 (dc2aedaf03, 2022-05-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'psifig.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{229.8508606bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \small
+  \begin{picture}(1,0.793735)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{psifig.pdf}}%
+    \put(0.20208825,0.09322883){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}25.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{psifig.pdf}}%
+    \put(0.33592905,0.09322883){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}26.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{psifig.pdf}}%
+    \put(0.46976981,0.09322883){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}26.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{psifig.pdf}}%
+    \put(0.60361063,0.09322883){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}27.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{psifig.pdf}}%
+    \put(0.73745136,0.09322883){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}27.5\end{tabular}}}}%
+    \put(0.49686121,0.03530882){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Incidence angle [deg]\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{psifig.pdf}}%
+    \put(0.10923752,0.13895806){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}2.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{psifig.pdf}}%
+    \put(0.10923752,0.27459754){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}2.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{psifig.pdf}}%
+    \put(0.10923752,0.41023693){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}3.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{psifig.pdf}}%
+    \put(0.10923752,0.54587638){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}3.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{psifig.pdf}}%
+    \put(0.10923752,0.6815158){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}4.0\end{tabular}}}}%
+    \put(0.0299276,0.46023459){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}NESZ [dB] ---\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{psifig.pdf}}%
+    \put(0.88448492,0.13895806){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}-20\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{psifig.pdf}}%
+    \put(0.88448492,0.29155246){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}-15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{psifig.pdf}}%
+    \put(0.88448492,0.4441468){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}-10\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{psifig.pdf}}%
+    \put(0.88448492,0.59674117){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}-5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{psifig.pdf}}%
+    \put(0.88448492,0.74933552){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(1.00247176,0.46023461){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}RASR [dB] - - -\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{psifig.pdf}}%
+  \end{picture}%
+\endgroup%

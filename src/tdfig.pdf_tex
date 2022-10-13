@@ -1,0 +1,81 @@
+%% Creator: Inkscape 1.2 (dc2aedaf03, 2022-05-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'tdfig.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{213.95594788bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \small
+  \begin{picture}(1,0.81634099)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{tdfig.pdf}}%
+    \put(0.26669933,0.08084336){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}1000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{tdfig.pdf}}%
+    \put(0.40939384,0.08084336){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}2000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{tdfig.pdf}}%
+    \put(0.55208839,0.08084336){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}3000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{tdfig.pdf}}%
+    \put(0.69478291,0.08084336){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}4000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{tdfig.pdf}}%
+    \put(0.83747746,0.08084336){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}5000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{tdfig.pdf}}%
+    \put(0.98017194,0.08084336){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}6000\end{tabular}}}}%
+    \put(0.56992518,0.01969615){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}PRF [Hz]\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{tdfig.pdf}}%
+    \put(0.12848774,0.25934684){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}200\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{tdfig.pdf}}%
+    \put(0.12848774,0.43209267){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{tdfig.pdf}}%
+    \put(0.12848774,0.60483851){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}600\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{tdfig.pdf}}%
+    \put(0.12848774,0.77758435){\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}800\end{tabular}}}}%
+    \put(0.03421247,0.46991296){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Ground Range [km]\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{tdfig.pdf}}%
+  \end{picture}%
+\endgroup%
