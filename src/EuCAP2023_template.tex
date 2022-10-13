@@ -310,7 +310,7 @@
         Michael J. Neve\IEEEauthorrefmark{3}    % 3rd author, 3rd affiliations
     }                                     % ...
     \\
-    \IEEEauthorblockA{(University of Auckland):\\ Department of Electrical, Computer, and Software Engineering, Auckland, New Zealand}
+    \IEEEauthorblockA{Department of Electrical, Computer, and Software Engineering, \\The University of Auckland, Auckland, New Zealand}
     \IEEEauthorblockA{\IEEEauthorrefmark{1}% 1st affiliations
     smen851@aucklanduni.ac.nz, \IEEEauthorrefmark{2}% 2nd affiliations
     a.austin@auckland.ac.nz, \IEEEauthorrefmark{3}% 3rd affiliations
@@ -332,9 +332,9 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
     \begin{abstract}
-        The potential of nanosatellite radar sensors for illegal fishing vessel detection in the coastal waters and land of New Zealand is investigated.
-        It was found that for a sensor orbiting in Low Earth Orbit at 500~km, with an antenna compatible in width with the longest side of a 3-U CubeSat, i.e., 0.3~m and a length of 2~m and a peak transmitted power of 200~W, adequate detection performances can be obtained over a swath of up to 60~km at an incidence angle of 36$^\circ$ using an ambiguous acquisition mode.
-        Alternative solutions for different looking angles, but smaller swaths are also find to be viable.
+        The potential of nanosatellite radar sensors for illegal fishing vessel detection in the coastal waters and imaging on the land of New Zealand is investigated.
+        It was found that for a sensor orbiting in Low Earth Orbit at 500~km, with an antenna compatible in width with the longest side of a 3-U CubeSat, i.e., 0.3~m and a length of 2~m and a peak transmitted power of 200~W, adequate detection performance can be obtained over a swath of up to 60~km at an incidence angle of 36$^\circ$ using an ambiguous acquisition mode.
+        Alternative solutions for different looking angles, but smaller swaths are also found to be viable.
         A design method and the resulting imaging performance for a land non-ambiguous imaging mode are also presented.
     \end{abstract}
 
@@ -463,7 +463,7 @@
             \end{normalsize}
         %\includegraphics[width=.8\columnwidth]{probdect}%
             \label{fig:Probability of Detection}}
-        \caption{(The timing diagram (a) and the Probability of detection (b) for a selection of valid design candidates with different looking angles.}
+        \caption{The timing diagram (a) and the Probability of detection (b) for a selection of valid design candidates with different looking angles.}
         \label{fig:double column}
     \end{figure*}
 
@@ -516,8 +516,9 @@
         \item \textbf{else}
         \begin{enumerate}
             \item \label{pt:relaxed}Relax the constraint on swath, setting \\$r_{1,2} = r(\theta_i \pm \alpha\ \theta_{el}/2)\; ;\ 0< \alpha < 1 $
-            \item repeat from step \ref{pt:PRI0}: % todo remove the goto
+
         \end{enumerate}
+        \item repeat from step \ref{pt:PRI0}
     \end{enumerate}
     In the algorithm, PRI $=$ $1/$PRF is the Pulse Repetition Interval, $\theta_{el} \approx \lambda/W_a$ is the elevation antenna beamwidth, $\theta_i$ is the radar side-looking angle associated with the incidence angle and $n$ is the pulse order of the signal of interest.
     When computing the NESZ \eqref{eq:nesz} to find $P_d$, is assumed that $B_p = B_D$, where $B_D$ is the nominal Doppler bandwidth related to the azimuth antenna beamwidth i.e. $B_D \approx 2 v_s / L_a$.
@@ -533,16 +534,17 @@
     The $\eta_i$ values in the legend are the incidence angles of the resulting antenna broadside pointing direction for each solution.\\
     In Table \ref{tab:analysis}, some numerical values are reported for the same design points: the \emph{useful} ground swath, the chirp bandwidth to satisfy the ground resolution requirement (this is to be considered a minimum value requirement, an higher bandwidth is expected to produce better results as explained in \cite{DLRjournal}), and the \emph{undersampling} factor $B_D/$PRF, which, since we are considering an ambiguous acquisition mode in azimuth, is always larger than 1.
     Additionally, the Azimuth Ambiguity to Signal Ratio (AASR), defined as in \cite{curlander1991synthetic}, and computed using the along-track cut of the antenna pattern, is tabulated along with the peak value of the Range Ambiguity to Signal Ratio (RASR) within the useful swath, also defined as in \cite{curlander1991synthetic}, and computed using the elevation integrated antenna pattern.
-    \begin{table}[h]
-        \caption{Design examples results\\(todo pick 6 or 7 design points)}
+    \begin{table}[t]
+        \caption{Design examples results}
         \label{tab:analysis}
         \centering
-        \renewcommand{\arraystretch}{-1}
+        %\renewcommand{\arraystretch}{1}
         \large
         \resizebox{\columnwidth}{!}{
             \begin{tabular}{|l|l|l|l|l|l|l|l|}
                 \hline
-                $\eta_i$\rule[0mm]{0mm}{3.1mm}         & 17.9$^\circ$ & 25.6$^\circ$ & 30.8$^\circ$ & 36.0$^\circ$& 38.5$^\circ$& 45.4$^\circ$& 58.3$^\circ$\\\hline
+                Case no.                               & 1            & 2            & 3            & 4            & 5            & 6            & 7            \\\hline
+                $\eta_i$\rule[0mm]{0mm}{3.1mm}         & 17.9$^\circ$ & 25.6$^\circ$ & 30.8$^\circ$ & 36.0$^\circ$ & 38.5$^\circ$ & 45.4$^\circ$ & 58.3$^\circ$ \\\hline
                 $W_g$[km]\rule[0mm]{0mm}{3.1mm}        & 56.8         & 38.7         & 48.9         & 60.8         & 67.1         & 78.3         & 81.4         \\\hline
                 $B_n$[MHz]\rule[0mm]{0mm}{3.1mm}       & 245.3        & 173.9        & 146.7        & 127.7        & 120.8        & 105.6        & 88.3         \\\hline
                 $B_D/\text{PRF}$\rule[0mm]{0mm}{3.1mm} & 2.5          & 1.7          & 2.5          & 3.6          & 4.2          & 6.4          & 12.7         \\\hline
@@ -575,11 +577,11 @@
     Given the PRF and the duty cycle are properly chosen to keep the range ambiguities (i.e., RASR) below an acceptable level within the imaged swath;
     if the ratio between PRF and nominal Doppler bandwidth $B_d$ is between 1 and 2, the azimuth ambiguities (AASR) can be reduced by choosing a processed Doppler bandwidth $B_p < B_D$  \cite{freeman2018design}.
     On the other hand, a reduction of $B_d$ comes at the expense of a lower azimuth resolution.\\
-    By inspection of Table\ref{tab:analysis} we can see that only one design candidate presents an undersampling ratio lower than 2.
+    By inspection of Table \ref{tab:analysis} we can see that only one design candidate presents an undersampling ratio lower than 2.
     Expanding the analysis it was noted that design points with lower $B_D/\text{PRF}$ present a narrower swath for similar looking angles, this is due to the higher PRF.
-    These two considerations suggest that it is indeed possible to obtain a non ambiguous image from the same satellite.
+    These two considerations suggest that it is indeed possible to obtain a non-ambiguous image from the same satellite.
     Instead of using the same PRF and $\eta_i$ of the above "valid" solution, we can try to further reduce the swath width to increase the PRF (at the expense of an higher RASR).
-    Furthermore, given the transmit power is already low, a narrower looking angle is preferrable (and will also tend to have a lower PRF).\\
+    Furthermore, given the transmit power is already low, a narrower looking angle is preferable (and will also tend to have a higher PRF).\\
     A method is proposed in section \ref{subsec:psiproc} to select the optimal system parameters:
 
     \subsection{Procedure}
@@ -594,17 +596,17 @@
         \item Update $r_{1,2}$ setting $r_{1} = (n + \delta)\text{PRI}\ c / 2 $  and\\ $r_2 = (n + 1 - \delta)\text{PRI}\ c / 2\; ;\ n\in \mathbb{N}$
         \item Recenter the antenna i.e. find the $\eta_i$ angle so that $\text{NESZ}(r_1) = \text{NESZ}(r_2)$
         \item Set $B_p = B_D$
-        \item find $B_p$ so that AASR$=$AASR$_{min}$ \label{pt:optim}
+        \item find $B_p$ so that AASR$=$AASR$_{max}$ \label{pt:optim}
         \item \textbf{return} $\eta_i$, PRI, $r_{1,2},\  B_p$
     \end{enumerate}
-    In point \ref{pt:optim} it can be assumed that AASR is monotonically decreasing with $B_p$ \cite{freeman2018design}, however is not guaranteed that a solution exists for an arbitrarily low $AASR_min$.
+    In point \ref{pt:optim} it can be assumed that AASR is monotonically decreasing with $B_p$ \cite{freeman2018design}, however is not guaranteed that a solution exists for an arbitrarily low AASR$_{max}$.
 
     \subsection{Example}
     \label{subsec:psiexample}
-        \begin{figure}[ht]
+    \begin{figure}[ht]
         \centering
         \begin{normalsize}
-                \import{./}{psifig.pdf_tex}
+            \import{./}{psifig.pdf_tex}
         \end{normalsize}
         %\includegraphics[width=0.8\columnwidth]{psi}
         \caption{Unambiguous mode predicted NESZ and RASR}
@@ -619,12 +621,12 @@
         \centering
         \begin{tabular}{|l|l|}
             \hline
-            $\eta_i$          & 26.8$^\circ$ \\ \hline
-            $W_g$         &  24.3 km          \\ \hline
-            $B_n$             & 200 MHz    \\ \hline
-            $B_p/B_D$         & 0.75           \\ \hline
-            $\delta_{az}$     &1.3 m        \\ \hline
-            AASR         &-14 dB           \\ \hline
+            $\eta_i$      & 26.8$^\circ$ \\ \hline
+            $W_g$         & 24.3 km      \\ \hline
+            $B_n$         & 200 MHz      \\ \hline
+            $B_p/B_D$     & 0.75         \\ \hline
+            $\delta_{az}$ & 1.3 m        \\ \hline
+            AASR          & -14 dB       \\ \hline
         \end{tabular}
     \end{table}
 
@@ -644,7 +646,7 @@
     A set of valid system parameter candidates was presented for incidence angles between 22$^\circ$ and 40$^\circ$ finding that ground swaths between 38.7~km and 60.8~km can be covered with adequate detection performance and a low level of range ambiguities (RASR<-18~dB).
     The dependency between ground swath and looking angle was characterized showing that the swath width cannot be chosen to be arbitrarily large by reducing the antenna aperture size in elevation.
     The optimal looking angle for wide swath imaging, given the system constraints was selected accordingly.
-    Additionally, a design procedure to use the same system for land imaging was proposed and a design example presented and characterized finding that an azimuth ground resolution of 1.2~m and swath of 24.3~km can be obtained, but with low single acquisition dynamic range performances i.e., NESZ~>~2.8~dB and RASR$\approx$10~dB.
+    Additionally, a design procedure to use the same system for land imaging was proposed and a design example presented and characterized finding that an azimuth ground resolution of 1.2~m and swath of 24.3~km can be obtained, but with low single acquisition dynamic range performance i.e., NESZ~>~2.8~dB and RASR$\approx$10~dB.\\
 
 % use section* for acknowledgment
 %    \section*{Acknowledgment}
@@ -677,9 +679,7 @@
 
     \color{red}
 % add name of last editor and increase the v count
-    draft v1 Simone
-
-
+    %draft v2 Simone
 % that's all folks
 \end{document}
 
