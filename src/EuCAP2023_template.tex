@@ -333,7 +333,7 @@
 % in the abstract
     \begin{abstract}
         The potential of nanosatellite radar sensors for illegal fishing vessel detection in the coastal waters and imaging on the land of New Zealand is investigated.
-        It was found that for a sensor orbiting in Low Earth Orbit at 500~km, with an antenna compatible in width with the longest side of a 3-U CubeSat, i.e., 0.3~m and a length of 2~m and a peak transmitted power of 200~W, adequate detection performance can be obtained over a swath of up to 60~km at an incidence angle of 36$^\circ$ using an ambiguous acquisition mode.
+        It was found that for a sensor in Low Earth Orbit at an altitude of 500~km, with an antenna compatible in width with the longest side of a 3-U CubeSat, i.e., 0.3~m and a length of 2~m and a peak transmitted power of 200~W; adequate detection performance can be obtained over a swath of up to 60~km at an incidence angle of 36° using an ambiguous acquisition mode.
         Alternative solutions for different looking angles, but smaller swaths are also found to be viable.
         A design method and the resulting imaging performance for a land non-ambiguous imaging mode are also presented.
     \end{abstract}
@@ -367,7 +367,6 @@
     Being part of the Pacific Ring of Fire, this is of particular interest to New Zealand for the study of its volcanic and seismic regions.
     Furthermore, a nanosatellite SAR sensor constellation could have several advantages over current satellite platforms, given their lower cost and scalability.
     In particular, coverage of vast areas with near real-time revisit time could be achieved \cite{ReviewCubeSats}, making the employment of this kind of sensor especially suited to the applications mentioned above.\\
-
     In practice, a small-satellite SAR will have limitations due to the reduced size.
     Most notably, it would be limited in peak power, while the antenna would have to rely on some deployable structure, e.g., \cite{Annalisa}, and most likely be limited in size and choice of form factor.
     Besides implying a low gain, this also limits the options when choosing the imaging resolution and swath while avoiding ambiguities, and the so-called \emph{minimum antenna area constraint} \cite{curlander1991synthetic} cannot always be satisfied.\\
@@ -396,15 +395,12 @@
     The minimum ship size to be detected is assumed to be 30~m~x~7~m as in \cite{JAN}.
     The minimum ground target resolution for ship detection imaging is set to $\delta_{az}\delta_{r}=2~$m$^2$ as the spotlight images resolution used in \cite{DLRjournal}, for a conservative $P_d$ estimation.
     Additionally $P_{fa} = 10^{-6}$, which corresponds to less than 1 false alarm per EEZ area (using eq. 14 in \cite{DLRjournal}).\\
-
     The remainder of this paper is structured as follows: in Section \ref{sec:systemDesign}, a system design algorithm is presented for the ambiguous ship detection mode, and seven potential design candidates are characterized and discussed.
     In section \ref{sec:psi}, the design procedure is modified to find a design candidate suitable for terrestrial imaging, and the resulting predicted performance is discussed.
     Lastly some conclusions are provided in Section \ref{sec:conclusion}.
 
-
     \section{System Design}
     \label{sec:systemDesign}
-
     In Table \ref{tab:parameters}, the initial design assumptions from the considerations in Section \ref{sec:intro} are summarized.
     \begin{table}[h]
         \caption{System Parameters}
@@ -447,7 +443,6 @@
     A spherical earth geometry is assumed in all calculations;
     the incidence angle $\eta$, ground range $r_g$, and slant range $r$ are defined accordingly and related to each other.
     The incidence angle of the antenna broadside direction projected on ground (which will depend on the looking angle) is denoted as $\eta_i$.
-
     \begin{figure*}[t]
         \centering
         \subfloat[ ]{
@@ -500,7 +495,7 @@
         \item Compute the NESZ using \eqref{eq:nesz}
         \item Compute $P_d$ from NESZ
         \item \label{pt:swath1}Find the initial swath extremes $r_{1}$ and $r_{2}$ so that: $P_d(r_1) = P_d(r_1) = P_{d_{min}}$
-        \item \label{pt:swath2} \textbf{if} {$(r_2 - r_1) \leq \left[r(\theta_i + \theta_{el}/2) - r(\theta_i + \theta_{el}/2) \right]$}
+        \item \label{pt:swath2} \textbf{if} {$(r_2 - r_1) \leq \left[r(\theta_i + \theta_{el}/2) - r(\theta_i - \theta_{el}/2) \right]$}
         \begin{enumerate}
             \item $r_{1,2} = r(\theta_i \pm \theta_{el}/2)$ ;to avoid range ambiguities
         \end{enumerate}
@@ -516,10 +511,10 @@
         \item \textbf{else}
         \begin{enumerate}
             \item \label{pt:relaxed}Relax the constraint on swath, setting \\$r_{1,2} = r(\theta_i \pm \alpha\ \theta_{el}/2)\; ;\ 0< \alpha < 1 $
-
         \end{enumerate}
         \item repeat from step \ref{pt:PRI0}
     \end{enumerate}
+
     In the algorithm, PRI $=$ $1/$PRF is the Pulse Repetition Interval, $\theta_{el} \approx \lambda/W_a$ is the elevation antenna beamwidth, $\theta_i$ is the radar side-looking angle associated with the incidence angle and $n$ is the pulse order of the signal of interest.
     When computing the NESZ \eqref{eq:nesz} to find $P_d$, is assumed that $B_p = B_D$, where $B_D$ is the nominal Doppler bandwidth related to the azimuth antenna beamwidth i.e. $B_D \approx 2 v_s / L_a$.
 
@@ -560,7 +555,7 @@
     as a result, for $\eta_i$ between 22$^\circ$ and 35$^\circ$ (i.e., ground ranges approximately between 180--300 km), the achievable swath width is much smaller than for the design points with larger or smaller $\eta_i$.
     Second, it can be seen that the general trend for the peak $P_d$ is decreasing with the ground swath, which is to be expected given the increase in the slant range.\\
     The RASR level, as expected due to the low values for the PRF, is within acceptable levels for all the presented solutions.
-    The AASR, as expected, is quite large, given the $B_D/\text{PRF}>1$; however, as explained in \cite{DLRjournal}, this is not a problem, for the replicas of the ship targets will be identifiable as ambiguities (and potentially exploited to increase $P_d$ using a more sophisticated detection algorithm), while the increased clutter noise due to azimuth ambiguities will not affect the detection performance significantly.\\
+    The AASR, as expected, is quite large, given the $B_D/\text{PRF}>1$; however, as explained in \cite{DLRjournal}, this is not a problem, for the replicas of the ship targets will be identifiable as ambiguities (and potentially exploited to increase $P_d$ using a more sophisticated detection algorithm), while the increased clutter noise due to azimuth ambiguities will not affect the detection performance significantly.
     Furthermore, the chirp bandwidth is kept between 100--200 MHz for most design points, even though an higher bandwidth will theoretically give better results, a nanosatellite might be limited in terms of downlink or storage capacity, therefore is good to have some margin (which could allow a longer azimuth strip to be imaged).
     % Overall, a wide enough set of solutions exist to cover different parts of the ground swath from the same orbit.\\
     If the looking angle can be chosen arbitrarily, a good design solution is the one for $\eta_i=36^\circ$ in Table \ref{tab:analysis} that provides a ground swath of 60.8~km while remaining within the 22$^\circ$--40$^\circ$ incidence angle range of validity over all the swath.
@@ -569,10 +564,8 @@
     Other valid solutions exist, but will cover a narrower ground swath.
     Still, these can be used whenever a specific portion of ground not covered by the radar pointing the antenna to $\eta_i=36^\circ$, has to be imaged.
 
-
     \section{Unambiguous imaging mode}
     \label{sec:psi}
-
     A canonical SAR system for land imaging, given the specified antenna width $W_a$ would require an antenna much longer than the one in Table \ref{tab:parameters}.
     Given the PRF and the duty cycle are properly chosen to keep the range ambiguities (i.e., RASR) below an acceptable level within the imaged swath;
     if the ratio between PRF and nominal Doppler bandwidth $B_d$ is between 1 and 2, the azimuth ambiguities (AASR) can be reduced by choosing a processed Doppler bandwidth $B_p < B_D$  \cite{freeman2018design}.
@@ -629,11 +622,10 @@
             AASR          & -14 dB       \\ \hline
         \end{tabular}
     \end{table}
-
     In Fig. \ref{fig:eucap}, the NESZ and The RASR for the design example are plotted over the ground swath.
     The final image resolution and the swath width resulting from the design procedure are in line with larger and more expensive SAR platforms, with the azimuth resolution only slightly larger than the one used for ship detection.
     However, the NESZ and RASR values are extremely poor by canonical standards \cite{curlander1991synthetic}.
-    As a result a single satellite with this acquisition mode with these the system constraints, will only be able to "see" very bright targets or artificial corner reflectors (that still might be sufficient for some very specific interferometric applications).
+    As a result a single satellite with this acquisition mode with these system constraints, will only be able to "see" very bright targets or artificial corner reflectors (that still might be sufficient for some very specific interferometric applications).
     More useful results might be obtained if multilooking techniques \cite{curlander1991synthetic,moreira_tutorial} are employed, by repeatedly passing over the scene with the same sensor or using multiple identical nanosatellite sensors.
     Furthermore, some increase in performance might be obtained slightly increasing the duty cycle (at the expense of a narrower swath), the antenna size or the transmitted power.
 
