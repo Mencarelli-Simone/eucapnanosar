@@ -391,7 +391,10 @@
     For simplicity, the aperture is considered uniformly illuminated with no phase tapering, resulting in a sinc-shaped 2-d gain pattern;
     to keep complexity to a minimum, a single phase center (and Transmit Receive Module) is assumed.\\
     The maximum RF peak power is set to 200~W; by comparison, this corresponds to 1/4 of the peak power of the micro-satellite SAR Strix-$\alpha$ from Synspective \cite{StriX-a} and should be feasible using RF off-the-shelf components.
-    A large duty cycle is assumed to compensate for the low peak power, i.e., 25\%. The losses $L$ and noise figure $F$ of the receiver are conservatively set to $L+F = 10$~dB as in \cite{JAN}.
+    A large duty cycle is assumed to compensate for the low peak power, i.e., 25\%.
+    The losses $L$ and noise figure $F$ of the receiver are conservatively set to $L+F = 10$~dB as in \cite{JAN},
+    % addition from comment from reviewer 2
+    accounting for both system and atmospheric effects.
     The minimum ship size to be detected is assumed to be 30~m~x~7~m as in \cite{JAN}.
     The minimum ground target resolution for ship detection imaging is set to $\delta_{az}\delta_{r}=2~$m$^2$ as the spotlight images resolution used in \cite{DLRjournal}, for a conservative $P_d$ estimation.
     Additionally $P_{fa} = 10^{-6}$, which corresponds to less than 1 false alarm per EEZ area (using eq. 14 in \cite{DLRjournal}).\\
@@ -401,6 +404,31 @@
 
     \section{System Design}
     \label{sec:systemDesign}
+        \begin{figure*}[!ht]
+        \centering
+        \subfloat[ ]{
+            \begin{normalsize}
+                \import{./}{tdfig.pdf_tex}
+            \end{normalsize}
+        %\includegraphics[width=0.8\columnwidth]{timingdiagram}%
+            \label{fig:timingdiagram}}
+        \hfil
+        \subfloat[]{
+            \begin{normalsize}
+                \import{./}{pd.pdf_tex}
+            \end{normalsize}
+        %\includegraphics[width=.8\columnwidth]{probdect}%
+            \label{fig:Probability of Detection}}
+        \caption{The timing diagram (a)
+            % addition for reviewer 1 comment
+            with the transmit events (blind ranges) shown in orange and the nadir return location shown in black
+            , and the Probability of detection
+            % addition for reviewer 1 comment
+            curves over ground range
+            (b) for a selection of valid design candidates with different looking angles.}
+        \label{fig:double column}
+    \end{figure*}
+
     In Table \ref{tab:parameters}, the initial design assumptions from the considerations in Section \ref{sec:intro} are summarized.
     \begin{table}[h]
         \caption{System Parameters}
@@ -443,24 +471,6 @@
     A spherical earth geometry is assumed in all calculations;
     the incidence angle $\eta$, ground range $r_g$, and slant range $r$ are defined accordingly and related to each other.
     The incidence angle of the antenna broadside direction projected on ground (which will depend on the looking angle) is denoted as $\eta_i$.
-    \begin{figure*}[t]
-        \centering
-        \subfloat[ ]{
-            \begin{normalsize}
-                \import{./}{tdfig.pdf_tex}
-            \end{normalsize}
-        %\includegraphics[width=0.8\columnwidth]{timingdiagram}%
-            \label{fig:timingdiagram}}
-        \hfil
-        \subfloat[]{
-            \begin{normalsize}
-                \import{./}{pd.pdf_tex}
-            \end{normalsize}
-        %\includegraphics[width=.8\columnwidth]{probdect}%
-            \label{fig:Probability of Detection}}
-        \caption{The timing diagram (a) and the Probability of detection (b) for a selection of valid design candidates with different looking angles.}
-        \label{fig:double column}
-    \end{figure*}
 
     \subsection{Procedure}
     \label{subsec:procedure}
@@ -525,7 +535,9 @@
     Seven of the resulting design \emph{points} are selected.
     In Fig. \ref{fig:timingdiagram} the timing diagram is plotted with the design solutions displayed as colored pulse-to-pulse vertical lines, while the \emph{visible} swath (factoring in duty cycle and pulse compression) is marked by two `+'.
     Fig. \ref{fig:Probability of Detection} shows the $P_d$ variation over the swath for each design point.
-    The horizontal lines in Fig. \ref{fig:Probability of Detection} mark the \emph{useful} ground swath $W_g$, i.e., the swath over which ships would be detected with a $P_d \geq P_{d_{min}}$.
+    The horizontal lines in Fig. \ref{fig:Probability of Detection} mark the \emph{useful} ground swath $W_g$, i.e., the swath over which ships would be detected with a $P_d \geq P_{d_{min}}$.%
+    % added after comment from reviewer 2
+    %(i.e., at $P_{d_{min}} = 0.5$ or higher if the $P_d > P_{d_{min}}$ within the visible swath).
     The $\eta_i$ values in the legend are the incidence angles of the resulting antenna broadside pointing direction for each solution.\\
     In Table \ref{tab:analysis}, some numerical values are reported for the same design points: the \emph{useful} ground swath, the chirp bandwidth to satisfy the ground resolution requirement (this is to be considered a minimum value requirement, an higher bandwidth is expected to produce better results as explained in \cite{DLRjournal}), and the \emph{undersampling} factor $B_D/$PRF, which, since we are considering an ambiguous acquisition mode in azimuth, is always larger than 1.
     Additionally, the Azimuth Ambiguity to Signal Ratio (AASR), defined as in \cite{curlander1991synthetic}, and computed using the along-track cut of the antenna pattern, is tabulated along with the peak value of the Range Ambiguity to Signal Ratio (RASR) within the useful swath, also defined as in \cite{curlander1991synthetic}, and computed using the elevation integrated antenna pattern.
