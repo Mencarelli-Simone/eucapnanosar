@@ -48,7 +48,7 @@
 % The testflow support page is at:
 % http://www.michaelshell.org/tex/testflow/
 
-
+%\newcommand{\CLASSINPUTtoptextmargin}{1.802cm}
 
 \documentclass[conference,a4paper]{IEEEtran}
 % Some Computer Society conferences also require the compsoc mode option,
@@ -289,8 +289,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{amssymb}
 \usepackage{import}
+\addtolength{\topmargin}{+0.038cm}
 
-
+%\usepackage[top=1.8cm]{geometry}
 \begin{document}
 %
 % paper title
@@ -404,7 +405,7 @@
 
     \section{System Design}
     \label{sec:systemDesign}
-        \begin{figure*}[!ht]
+        \begin{figure*}[t]
         \centering
         \subfloat[ ]{
             \begin{normalsize}
@@ -541,7 +542,9 @@
     The $\eta_i$ values in the legend are the incidence angles of the resulting antenna broadside pointing direction for each solution.\\
     In Table \ref{tab:analysis}, some numerical values are reported for the same design points: the \emph{useful} ground swath, the chirp bandwidth to satisfy the ground resolution requirement (this is to be considered a minimum value requirement, an higher bandwidth is expected to produce better results as explained in \cite{DLRjournal}), and the \emph{undersampling} factor $B_D/$PRF, which, since we are considering an ambiguous acquisition mode in azimuth, is always larger than 1.
     Additionally, the Azimuth Ambiguity to Signal Ratio (AASR), defined as in \cite{curlander1991synthetic}, and computed using the along-track cut of the antenna pattern, is tabulated along with the peak value of the Range Ambiguity to Signal Ratio (RASR) within the useful swath, also defined as in \cite{curlander1991synthetic}, and computed using the elevation integrated antenna pattern.
+
     \begin{table}[t]
+        \rule[1mm]{0mm}{1mm}
         \caption{Design examples results}
         \label{tab:analysis}
         \centering
@@ -559,6 +562,7 @@
                 RASR[dB]\rule[0mm]{0mm}{3.1mm}         & -32.4        & -22.9        & -19.5        & -18.7        & -19.6        & -26.8        & -26.5        \\\hline
             \end{tabular}}
     \end{table}
+
     A note that has to be made regarding these results is the following: the $P_d$ model utilized here is based on data from observations made between a declared range of 22$^\circ$ to 40$^\circ$ for the incidence angle $\eta$.
     Some results slightly outside this boundary are reported for completeness.
     Still, in a final system design, only those within the above range should be considered without further studies on the characteristics of scatterers at those angles.\\
